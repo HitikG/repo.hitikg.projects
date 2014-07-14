@@ -7,3 +7,12 @@ V1.0:
 - Added A Simple Account Creation System
 - Added A Simple Login System
 - Integrated Bootstrap Under Creative Commons
+
+V1.0.1:
+- Added Changelog
+
+V1.0.2:
+- Added Posting Abilities
+- Cleaned UI Up
+- Cleaned Up Database
+- Now Using A Database Hosted On A Local SQL Server
