@@ -1,0 +1,9 @@
+HRiDiscuss Changelog
+
+--- Built Using C#/ASP.net With JQuery And Javascript ---
+
+V1.0:
+- Added The Basic UI
+- Added A Simple Account Creation System
+- Added A Simple Login System
+- Integrated Bootstrap Under Creative Commons
