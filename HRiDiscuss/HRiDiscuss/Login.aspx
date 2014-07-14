@@ -8,9 +8,9 @@
             <asp:Label ID="LblCreate" runat="server" Text="Create An Account"></asp:Label>
             <br />
             <br />
-            <asp:TextBox ID="TbCreateUser" runat="server" placeholder="Username" MaxLength="15" ></asp:TextBox><br />
+            <asp:TextBox ID="TbCreateUser" runat="server" placeholder="Username" MaxLength="15"></asp:TextBox><br />
             <br />
-            <asp:TextBox ID="TbCreatePass" runat="server" placeholder="Password" TextMode="Password" ></asp:TextBox><br />
+            <asp:TextBox ID="TbCreatePass" runat="server" placeholder="Password" TextMode="Password"></asp:TextBox><br />
             <asp:Label ID="LblCreateMsg" runat="server" Text=""></asp:Label>
             <br />
             <br />

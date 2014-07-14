@@ -10,3 +10,9 @@ P:\Programming\HRiDiscuss\HRiDiscuss\bin\HRiDiscuss.pdb
 P:\Programming\HRiDiscuss\HRiDiscuss\obj\Debug\HRiDiscuss.csprojResolveAssemblyReference.cache
 P:\Programming\HRiDiscuss\HRiDiscuss\obj\Debug\HRiDiscuss.dll
 P:\Programming\HRiDiscuss\HRiDiscuss\obj\Debug\HRiDiscuss.pdb
+C:\Users\Hitik\Documents\GitHub\repo.hitikg.projects\HRiDiscuss\HRiDiscuss\bin\HRiDiscuss.dll.config
+C:\Users\Hitik\Documents\GitHub\repo.hitikg.projects\HRiDiscuss\HRiDiscuss\bin\HRiDiscuss.dll
+C:\Users\Hitik\Documents\GitHub\repo.hitikg.projects\HRiDiscuss\HRiDiscuss\bin\HRiDiscuss.pdb
+C:\Users\Hitik\Documents\GitHub\repo.hitikg.projects\HRiDiscuss\HRiDiscuss\obj\Debug\HRiDiscuss.csprojResolveAssemblyReference.cache
+C:\Users\Hitik\Documents\GitHub\repo.hitikg.projects\HRiDiscuss\HRiDiscuss\obj\Debug\HRiDiscuss.dll
+C:\Users\Hitik\Documents\GitHub\repo.hitikg.projects\HRiDiscuss\HRiDiscuss\obj\Debug\HRiDiscuss.pdb
