@@ -1,0 +1,41 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="HRiDiscuss.Site1" %>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="Content/bootstrap-theme.css" rel="stylesheet" />
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="Content/bootstrap-theme.min.css" rel="stylesheet" />
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+    <script src="Scripts/jquery-2.1.1.js"></script>
+    <script src="Scripts/bootstrap.js"></script>
+</head>
+<body>
+    <form id="form1" runat="server">        
+        <div class="Layout">
+            <nav class="navbar navbar-default" role="navigation">
+                <asp:Label ID="LblHome" CssClass="navbar-brand" runat="server" Text="HRiDiscuss"></asp:Label>
+                <!-- Replace With Logo -->
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="Dropdown">
+                        <a href="#" class="dropdown-toggle Layout" data-toggle="dropdown">More <span class="caret"></span></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="/Login.aspx">Login</a></li>
+                            <li><a href="#">Forums</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                            <li class="divider"></li>
+                            <li>
+                                <asp:Label ID="LblCopyright" CssClass="Label" runat="server" Text="HRiUtilities 2012-2014"></asp:Label></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+    </form>
+</body>
+</html>

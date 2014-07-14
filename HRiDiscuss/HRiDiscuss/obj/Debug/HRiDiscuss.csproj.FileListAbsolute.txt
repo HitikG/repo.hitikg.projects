@@ -1,0 +1,12 @@
+E:\HRiDiscuss\HRiDiscuss\bin\HRiDiscuss.dll.config
+E:\HRiDiscuss\HRiDiscuss\bin\HRiDiscuss.dll
+E:\HRiDiscuss\HRiDiscuss\bin\HRiDiscuss.pdb
+E:\HRiDiscuss\HRiDiscuss\obj\Debug\HRiDiscuss.csprojResolveAssemblyReference.cache
+E:\HRiDiscuss\HRiDiscuss\obj\Debug\HRiDiscuss.dll
+E:\HRiDiscuss\HRiDiscuss\obj\Debug\HRiDiscuss.pdb
+P:\Programming\HRiDiscuss\HRiDiscuss\bin\HRiDiscuss.dll.config
+P:\Programming\HRiDiscuss\HRiDiscuss\bin\HRiDiscuss.dll
+P:\Programming\HRiDiscuss\HRiDiscuss\bin\HRiDiscuss.pdb
+P:\Programming\HRiDiscuss\HRiDiscuss\obj\Debug\HRiDiscuss.csprojResolveAssemblyReference.cache
+P:\Programming\HRiDiscuss\HRiDiscuss\obj\Debug\HRiDiscuss.dll
+P:\Programming\HRiDiscuss\HRiDiscuss\obj\Debug\HRiDiscuss.pdb
