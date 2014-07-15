@@ -11,6 +11,10 @@ namespace HRiDiscuss
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["LoggedIn"] != null)
+            {
+                LblUsername.Text = "Welcome, " + Session["Username"].ToString();
+            }
 
         }
     }

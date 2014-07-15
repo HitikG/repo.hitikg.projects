@@ -40,6 +40,15 @@ namespace HRiDiscuss {
         protected global::System.Web.UI.WebControls.Label LblHome;
         
         /// <summary>
+        /// LblUsername control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LblUsername;
+        
+        /// <summary>
         /// LblCopyright control.
         /// </summary>
         /// <remarks>

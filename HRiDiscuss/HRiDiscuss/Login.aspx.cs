@@ -49,7 +49,7 @@ namespace WebShare
                     TbCreatePass.Text = ""; //Clears The Textbox
                     Session["LoggedIn"] = "true"; //Sets The User As LoggedIn
                     Session["Username"] = TbCreateUser.Text;
-                    Response.AddHeader("REFRESH", "1;URL=Addlink.aspx"); //Redirects To The Addlink Page
+                    Response.AddHeader("REFRESH", "1;URL=Default.aspx"); //Redirects To The Addlink Page
                 }
 
             }
@@ -78,7 +78,7 @@ namespace WebShare
             {
                 Session["LoggedIn"] = "true"; //They're Logged In
                 Session["Username"] = TbLoginUser.Text; //Displays The User's Username
-                Response.Redirect("Addlink.aspx"); //Redirect
+                Response.Redirect("Default.aspx"); //Redirect
             }
             else
             {

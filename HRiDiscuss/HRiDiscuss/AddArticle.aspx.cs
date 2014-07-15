@@ -13,40 +13,46 @@ namespace HRiDiscuss
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (Session["LoggedIn"] == null)
+            {
+                Response.AddHeader("REFRESH", "1;URL=Login.aspx"); //Redirects To The Addlink Page
+            }
+            if (Session["LoggedIn"] != null)
+            {
+                string Username = Session["Username"].ToString();
+                Session["Username"] = Username.ToString();
+            }
+            
         }
 
         protected void BtnAddArticle_Click(object sender, EventArgs e)
         {
-            Session["Username"] = "HitikG";
-            string AccountQuery = "INSERT INTO Articles (ArticleTitle, ArticleText, ArticleAuthor, ArticlePostDate)  VALUES (@ArticleTitle, @ArticleText, @ArticleAuthor, @ArticlePostDate)"; //Our Query To Insert
-            SqlConnection AccountConnect = new SqlConnection(ConfigurationManager.ConnectionStrings["DsAccounts"].ConnectionString); //Declaring Our Connection String
-            SqlCommand AccountCmd = new SqlCommand(AccountQuery, AccountConnect); //Create A Command To Add To The Database
-            AccountCmd.Parameters.AddWithValue("@ArticleTitle", TbArticleTitle.Text); //Inserts The Username Into The Database
-            AccountCmd.Parameters.AddWithValue("@ArticleText", TbArticleText.Text); //Inserts The Password Into The Database
-            AccountCmd.Parameters.AddWithValue("@ArticleAuthor", Session["Username"].ToString()); //Inserts The Username Into The Database
-            AccountCmd.Parameters.AddWithValue("@ArticlePostDate", DateTime.Now); //Inserts The Password Into The Database
+            string ArticleQuery = "INSERT INTO Articles (ArticleTitle, ArticleText, ArticleAuthor, ArticlePostDate, ArticleImage)  VALUES (@ArticleTitle, @ArticleText, @ArticleAuthor, @ArticlePostDate, @ArticleImage)"; //Our Query To Insert
+            SqlConnection ArticleConnect = new SqlConnection(ConfigurationManager.ConnectionStrings["DsAccounts"].ConnectionString); //Declaring Our Connection String
+            SqlCommand ArticleCmd = new SqlCommand(ArticleQuery, ArticleConnect); //Create A Command To Add To The Database
+            ArticleCmd.Parameters.AddWithValue("@ArticleTitle", TbArticleTitle.Text); //Inserts The Username Into The Database
+            ArticleCmd.Parameters.AddWithValue("@ArticleText", TbArticleText.Text); //Inserts The Password Into The Database
+            ArticleCmd.Parameters.AddWithValue("@ArticleAuthor", Session["Username"].ToString()); //Inserts The Username Into The Database
+            ArticleCmd.Parameters.AddWithValue("@ArticlePostDate", DateTime.Now); //Inserts The Password Into The Database
+            //ArticleCmd.Parameters.AddWithValue("@ArticleImage", FileUpload); //Inserts The Password Into The Database
 
-            /*if (TbArticleTitle.Text == "") //Checks If The Textbox Is Empty
+            if (TbArticleTitle.Text == "") //Checks If The Textbox Is Empty
             {
-                LblCreateMsg.Text = "Enter A Valid Username."; //Displays An Error
+                LblError.Text = "Enter A Valid Title."; //Displays An Error
             }
-            else if (TbCreatePass.Text == "") //Checks If The Textbox Is Empty
+            if (TbArticleText.Text == "") //Checks If The Textbox Is Empty
             {
-                LblCreateMsg.Text = "Enter A Valid Password."; //Displays An Error
+                LblError.Text = "Enter A Valid Article Body."; //Displays An Error
             }
             else
-            {*/
-                AccountConnect.Open(); //Opens The Connection
-                AccountCmd.ExecuteNonQuery(); //Excecutes
-                AccountConnect.Close(); //Closes The Connection
-                /*LblCreateMsg.Text = "Account Creation Succeded! Redirecting..."; //Displays A Message
-                TbCreateUser.Text = ""; //Clears The Textbox
-                TbCreatePass.Text = ""; //Clears The Textbox
-                Session["LoggedIn"] = "true"; //Sets The User As LoggedIn
-                Session["Username"] = TbCreateUser.Text;
-                Response.AddHeader("REFRESH", "1;URL=Addlink.aspx"); //Redirects To The Addlink Page*/
-            //}
+            {
+                ArticleConnect.Open(); //Opens The Connection
+                ArticleCmd.ExecuteNonQuery(); //Excecutes
+                ArticleConnect.Close(); //Closes The Connection
+                LblError.Text = "Article Added, Awaiting Moderation!"; //Displays A Message
+                TbArticleTitle.Text = ""; //Clears The Textbox
+                TbArticleText.Text = ""; //Clears The Textbox
+            }
         }
     }
 }

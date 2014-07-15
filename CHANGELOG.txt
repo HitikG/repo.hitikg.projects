@@ -16,3 +16,9 @@ V1.0.2:
 - Cleaned UI Up
 - Cleaned Up Database
 - Now Using A Database Hosted On A Local SQL Server
+
+V1.0.3:
+- Article Posting Tidied Up
+- Now Displaying The Logged In User In The Navbar
+- Pages Where The User Needs To Be Logged In Now Require You To Do So If You Are Not
+- Added Image Uploader (Not Functioning Yet)
