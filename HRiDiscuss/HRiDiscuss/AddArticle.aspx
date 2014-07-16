@@ -13,7 +13,7 @@
         <br />
         <br />
         <br />
-        <asp:FileUpload ID="FuImage" runat="server" ValidationExpression="^(([a-zA-Z]:)|(\\{2}\w+)\$?)(\\(\w[\w].*))(.Jpg|.JPG|.JPEG|.PNG)$"/>
+        <asp:FileUpload runat="server" ID="UploadImages" AllowMultiple="false" />
         <asp:Button ID="BtnAddArticle" runat="server" Text="Add!" OnClick="BtnAddArticle_Click" />
         
         <asp:Label ID="LblError" runat="server" />

@@ -22,3 +22,8 @@ V1.0.3:
 - Now Displaying The Logged In User In The Navbar
 - Pages Where The User Needs To Be Logged In Now Require You To Do So If You Are Not
 - Added Image Uploader (Not Functioning Yet)
+
+V1.0.4:
+- Modified Database To Store Images
+- Implementing Image Upload (In Progress)
+- UI Tweaked (Temporarily)

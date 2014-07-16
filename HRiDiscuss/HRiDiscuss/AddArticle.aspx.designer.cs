@@ -31,13 +31,13 @@ namespace HRiDiscuss {
         protected global::System.Web.UI.WebControls.TextBox TbArticleText;
         
         /// <summary>
-        /// FuImage control.
+        /// UploadImages control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.FileUpload FuImage;
+        protected global::System.Web.UI.WebControls.FileUpload UploadImages;
         
         /// <summary>
         /// BtnAddArticle control.
