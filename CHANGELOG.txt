@@ -27,3 +27,8 @@ V1.0.4:
 - Modified Database To Store Images
 - Implementing Image Upload (In Progress)
 - UI Tweaked (Temporarily)
+
+V1.0.5:
+- Image Upload Implemented
+- DLL Rebuilt
+- Code Execution Process Cleaned
