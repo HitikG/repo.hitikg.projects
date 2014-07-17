@@ -15,7 +15,7 @@
         <br />
         <asp:FileUpload runat="server" ID="UploadImages" AllowMultiple="false" />
         <asp:Button ID="BtnAddArticle" runat="server" Text="Add!" OnClick="BtnAddArticle_Click" />
-        
         <asp:Label ID="LblError" runat="server" />
+        
     </div>
 </asp:Content>
