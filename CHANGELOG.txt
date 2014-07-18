@@ -30,5 +30,10 @@ V1.0.4:
 
 V1.0.5:
 - Image Upload Implemented
-- DLL Rebuilt
+- DLL Rebuilt (lol, wut?)
 - Code Execution Process Cleaned
+
+V1.0.6:
+- MD5 Encryption System Implemented!!!
+- Password Is No Longer Stored As Plain Text
+- Decryption Mechanism Implemented, Although Doesn't Work
