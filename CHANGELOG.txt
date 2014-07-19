@@ -39,5 +39,5 @@ V1.0.6:
 - Decryption Mechanism Implemented, Although Doesn't Work
 
 V1.0.6.1:
-- MD5 Hashing Removed
-- Project Stopped (ETA 2 Days)
+- Decryption Mechanism Implemented
+- Password Is Not Read As Plain Text

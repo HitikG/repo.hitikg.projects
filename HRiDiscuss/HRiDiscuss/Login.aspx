@@ -17,7 +17,7 @@
             <asp:Button ID="BtnCreate" runat="server" Text="Create!" OnClick="BtnCreate_Click" TabIndex="2" />
         </asp:Panel>
         <br />
-        <asp:Panel ID="PnlLogin" runat="server" DefaultButton="BtnLogin">
+        <asp:Panel ID="PnlLogin" runat="server" DefaultButton="BtnLogin"> 
             <asp:Label ID="LblUser" runat="server" Text="Log In"></asp:Label>
             <br />
             <br />

@@ -31,9 +31,21 @@ namespace WebShare
                 string AccountQuery = "INSERT INTO Accounts (Username, Password)  VALUES (@Username, @Password)"; //Our Query To Insert
                 SqlConnection AccountConnect = new SqlConnection(ConfigurationManager.ConnectionStrings["DsAccounts"].ConnectionString); //Declaring Our Connection String
                 SqlCommand AccountCmd = new SqlCommand(AccountQuery, AccountConnect); //Create A Command To Add To The Database
-                AccountCmd.Parameters.AddWithValue("@Username", TbCreateUser.Text); //Inserts The Username Into The Database
-                AccountCmd.Parameters.AddWithValue("@Password", TbCreatePass.Text; //Inserts The Password Into The Database
                 
+                SqlParameter ParamUsername;
+                ParamUsername = new SqlParameter("@Username", SqlDbType.VarChar, 10);
+                ParamUsername.Value = TbCreateUser.Text;
+                AccountCmd.Parameters.Add(ParamUsername);
+
+                MD5CryptoServiceProvider Hasher = new MD5CryptoServiceProvider();
+                byte[] HashedBytes;
+                UTF8Encoding Encoder = new UTF8Encoding();
+                HashedBytes = Hasher.ComputeHash(Encoder.GetBytes(TbCreatePass.Text));
+                SqlParameter ParamPassword;
+                ParamPassword = new SqlParameter("@Password", SqlDbType.Binary, 16);
+                ParamPassword.Value = HashedBytes;
+                AccountCmd.Parameters.Add(ParamPassword);
+                                
                 if (TbCreateUser.Text == "") //Checks If The Textbox Is Empty
                 {
                     LblCreateMsg.Text = "Enter A Valid Username."; //Displays An Error
@@ -60,23 +72,31 @@ namespace WebShare
 
         protected void BtnLogin_Click(object sender, EventArgs e)
         {
-            string LoginQuery = "SELECT * FROM Accounts WHERE Username=@Username AND Password=@Password"; //Our Query To Insert
+            string LoginQuery = "SELECT COUNT(*) FROM Accounts WHERE (Username=@Username AND Password=@Password)"; //Our Query To Insert
             SqlConnection LoginConnect = new SqlConnection(ConfigurationManager.ConnectionStrings["DsAccounts"].ConnectionString); //Declaring Our Connection String
             SqlCommand LoginCmd = new SqlCommand(LoginQuery, LoginConnect); //Create A Command To Add To The Database
-            LoginCmd.Parameters.AddWithValue("@Username", TbLoginUser.Text); //Stores The Data
-            LoginCmd.Parameters.AddWithValue("@Password", TbLoginPass.Text); //Stores The Data
+                        
+            SqlParameter ParamUsername;
+            ParamUsername = new SqlParameter("@Username", SqlDbType.VarChar, 25);
+            ParamUsername.Value = TbLoginUser.Text;
+            LoginCmd.Parameters.Add(ParamUsername);
+
+            MD5CryptoServiceProvider Hasher = new MD5CryptoServiceProvider();
+            byte[] HashedData;
+            UTF8Encoding Encoder = new UTF8Encoding();
+            HashedData = Hasher.ComputeHash(Encoder.GetBytes(TbLoginPass.Text));
+            
+            SqlParameter ParamPassword;
+            ParamPassword = new SqlParameter("@Password", SqlDbType.Binary, 16);
+            ParamPassword.Value = HashedData;
+            LoginCmd.Parameters.Add(ParamPassword);
+            int ExistingUsers = 0;
 
             LoginConnect.Open(); //Open The Connection
-            SqlDataReader Reader = LoginCmd.ExecuteReader(); //Reads The Database
-            int counter = 0; //Declaring Our Int
-
-            while (Reader.Read()) //While It Reads
-            {
-                counter++; //Checks The Database
-            }
+            ExistingUsers = Convert.ToInt32(LoginCmd.ExecuteScalar().ToString());                       
             LoginConnect.Close(); //Close Our Connection
 
-            if (counter > 0)
+            if (ExistingUsers > 0)
             {
                 Session["LoggedIn"] = "true"; //They're Logged In
                 Session["Username"] = TbLoginUser.Text; //Displays The User's Username

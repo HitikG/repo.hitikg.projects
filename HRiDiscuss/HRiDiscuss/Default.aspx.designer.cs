@@ -13,3 +13,4 @@ namespace HRiDiscuss {
     public partial class Default {
     }
 }
+ 

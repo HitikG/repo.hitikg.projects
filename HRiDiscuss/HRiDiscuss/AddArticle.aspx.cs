@@ -35,16 +35,14 @@ namespace HRiDiscuss
             ArticleCmd.Parameters.AddWithValue("@ArticleText", TbArticleText.Text); //Inserts The Password Into The Database
             ArticleCmd.Parameters.AddWithValue("@ArticleAuthor", Session["Username"].ToString()); //Inserts The Username Into The Database
             ArticleCmd.Parameters.AddWithValue("@ArticlePostDate", DateTime.Now); //Inserts The Password Into The Database
-
-
-
+            
             if (UploadImages.HasFiles)
             {
-                int length = UploadImages.PostedFile.ContentLength;
-                byte[] imgbyte = new byte[length];
+                int Length = UploadImages.PostedFile.ContentLength;
+                byte[] IMGByte = new byte[Length];
                 HttpPostedFile img = UploadImages.PostedFile;
-                img.InputStream.Read(imgbyte, 0, length);
-                ArticleCmd.Parameters.AddWithValue("@ArticleImage", imgbyte); //Inserts The Password Into The Database
+                img.InputStream.Read(IMGByte, 0, Length);
+                ArticleCmd.Parameters.AddWithValue("@ArticleImage", IMGByte); //Inserts The Password Into The Database
             }
             if (TbArticleTitle.Text == "") //Checks If The Textbox Is Empty
             {
