@@ -37,3 +37,7 @@ V1.0.6:
 - MD5 Encryption System Implemented!!!
 - Password Is No Longer Stored As Plain Text
 - Decryption Mechanism Implemented, Although Doesn't Work
+
+V1.0.6.1:
+- MD5 Hashing Removed
+- Project Stopped (ETA 2 Days)
