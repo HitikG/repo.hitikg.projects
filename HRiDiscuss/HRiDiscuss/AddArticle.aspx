@@ -17,5 +17,5 @@
         <asp:Button ID="BtnAddArticle" runat="server" Text="Add!" OnClick="BtnAddArticle_Click" />
         <asp:Label ID="LblError" runat="server" />
         
-    </div>
+    </div> 
 </asp:Content>

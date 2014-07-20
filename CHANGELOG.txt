@@ -41,3 +41,4 @@ V1.0.6:
 V1.0.6.1:
 - Decryption Mechanism Implemented
 - Password Is Not Read As Plain Text
+- Added Moderation Page (Day 2, Minor Update)
