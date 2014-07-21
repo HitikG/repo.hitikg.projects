@@ -36,22 +36,23 @@ namespace HRiDiscuss
             ArticleCmd.Parameters.AddWithValue("@ArticleAuthor", Session["Username"].ToString()); //Inserts The Username Into The Database
             ArticleCmd.Parameters.AddWithValue("@ArticlePostDate", DateTime.Now); //Inserts The Password Into The Database
             ArticleCmd.Parameters.AddWithValue("@IsModerated", "No"); //Inserts The Password Into The Database
-            
-            if (UploadImages.HasFiles)
-            {
-                int Length = UploadImages.PostedFile.ContentLength;
-                byte[] IMGByte = new byte[Length];
-                HttpPostedFile img = UploadImages.PostedFile;
-                img.InputStream.Read(IMGByte, 0, Length);
-                ArticleCmd.Parameters.AddWithValue("@ArticleImage", IMGByte); //Inserts The Password Into The Database
-            }
-            if (TbArticleTitle.Text == "") //Checks If The Textbox Is Empty
-            {
-                LblError.Text = "Enter A Valid Title."; //Displays An Error
-            }
+
+
+            bool test = true;
+            int Length = UploadImages.PostedFile.ContentLength;
+            byte[] IMGByte = new byte[Length];
+            HttpPostedFile img = UploadImages.PostedFile;
+            img.InputStream.Read(IMGByte, 0, Length);
+
+            ArticleCmd.Parameters.AddWithValue("@ArticleImage", IMGByte); //Inserts The Password Into The Database
+
             if (TbArticleText.Text == "") //Checks If The Textbox Is Empty
             {
                 LblError.Text = "Enter A Valid Article Body."; //Displays An Error
+                if (TbArticleTitle.Text == "") //Checks If The Textbox Is Empty
+                {
+                    LblError.Text = "Enter A Valid Title."; //Displays An Error                   
+                }
             }
             else
             {

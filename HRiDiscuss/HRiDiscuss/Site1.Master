@@ -25,7 +25,7 @@
                         <a href="#" class="dropdown-toggle Layout" data-toggle="dropdown">More <span class="caret"></span></a>
                         <ul class="dropdown-menu" role="menu"> 
                             <li><a href="/Login.aspx">Login</a></li>
-                            <li><a href="/AddArticle.aspx">Forums</a></li>
+                            <li><a href="/AddArticle.aspx">Forums</a></li> 
                             <li><a href="#">Contact Us</a></li>
                             <li class="divider"></li>
                             <li>

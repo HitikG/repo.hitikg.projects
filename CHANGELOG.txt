@@ -42,3 +42,8 @@ V1.0.6.1:
 - Decryption Mechanism Implemented
 - Password Is Not Read As Plain Text
 - Added Moderation Page (Day 2, Minor Update)
+
+V1.0.7:
+- Moderation Page Now Displays All Details And Images
+- UI Tweaks
+- Cleaned Build (Yay!) ((Not Needed In A Changelog))

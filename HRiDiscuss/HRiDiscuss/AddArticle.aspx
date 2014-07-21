@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="AddArticle.aspx.cs" Inherits="HRiDiscuss.AddArticle" %>
+﻿<%@ Page Title="Add An Article" Language="C#" MasterPageFile="~/Site1.Master" AutoEventWireup="true" CodeBehind="AddArticle.aspx.cs" Inherits="HRiDiscuss.AddArticle" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
@@ -13,8 +13,8 @@
         <br />
         <br />
         <br />
-        <asp:FileUpload runat="server" ID="UploadImages" AllowMultiple="false" /> 
-        <asp:Button ID="BtnAddArticle" runat="server" Text="Add!" OnClick="BtnAddArticle_Click" />
+        <asp:FileUpload runat="server" ID="UploadImages" AllowMultiple="false" /> <br />
+        <asp:Button ID="BtnAddArticle" runat="server" Text="Add!" OnClick="BtnAddArticle_Click" /><br /><br />
         <asp:Label ID="LblError" runat="server" />
         
     </div> 
