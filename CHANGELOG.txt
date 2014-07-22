@@ -30,7 +30,7 @@ V1.0.4:
 
 V1.0.5:
 - Image Upload Implemented
-- DLL Rebuilt (lol, wut?)
+- DLL Rebuilt (lol, wut?, why?, bool IsWeird=true;)
 - Code Execution Process Cleaned
 
 V1.0.6:
@@ -47,3 +47,8 @@ V1.0.7:
 - Moderation Page Now Displays All Details And Images
 - UI Tweaks
 - Cleaned Build (Yay!) ((Not Needed In A Changelog))
+
+V1.0.8:
+- Migrated All Functions To A Method (PowerToInnovate)
+- Always Tweakin' UI (Sorry)
+- Now Using A Secure SSL Channel And Transmitting Data Over https (#Ballin')

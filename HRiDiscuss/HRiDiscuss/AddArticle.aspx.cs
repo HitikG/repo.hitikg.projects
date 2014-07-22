@@ -28,23 +28,7 @@ namespace HRiDiscuss
 
         protected void BtnAddArticle_Click(object sender, EventArgs e)
         {
-            string ArticleQuery = "INSERT INTO Articles (ArticleTitle, ArticleText, ArticleAuthor, ArticlePostDate, ArticleImage, IsModerated)  VALUES (@ArticleTitle, @ArticleText, @ArticleAuthor, @ArticlePostDate, @ArticleImage, @IsModerated)"; //Our Query To Insert
-            SqlConnection ArticleConnect = new SqlConnection(ConfigurationManager.ConnectionStrings["DsAccounts"].ConnectionString); //Declaring Our Connection String
-            SqlCommand ArticleCmd = new SqlCommand(ArticleQuery, ArticleConnect); //Create A Command To Add To The Database
-            ArticleCmd.Parameters.AddWithValue("@ArticleTitle", TbArticleTitle.Text); //Inserts The Username Into The Database
-            ArticleCmd.Parameters.AddWithValue("@ArticleText", TbArticleText.Text); //Inserts The Password Into The Database
-            ArticleCmd.Parameters.AddWithValue("@ArticleAuthor", Session["Username"].ToString()); //Inserts The Username Into The Database
-            ArticleCmd.Parameters.AddWithValue("@ArticlePostDate", DateTime.Now); //Inserts The Password Into The Database
-            ArticleCmd.Parameters.AddWithValue("@IsModerated", "No"); //Inserts The Password Into The Database
-
-
-            bool test = true;
-            int Length = UploadImages.PostedFile.ContentLength;
-            byte[] IMGByte = new byte[Length];
-            HttpPostedFile img = UploadImages.PostedFile;
-            img.InputStream.Read(IMGByte, 0, Length);
-
-            ArticleCmd.Parameters.AddWithValue("@ArticleImage", IMGByte); //Inserts The Password Into The Database
+            PowerToInnovate Power = new PowerToInnovate();
 
             if (TbArticleText.Text == "") //Checks If The Textbox Is Empty
             {
@@ -56,9 +40,7 @@ namespace HRiDiscuss
             }
             else
             {
-                ArticleConnect.Open(); //Opens The Connection
-                ArticleCmd.ExecuteNonQuery(); //Excecutes
-                ArticleConnect.Close(); //Closes The Connection
+                Power.AddArticle(TbArticleTitle.Text, TbArticleText.Text, Session["Username"].ToString(), UploadImages);
                 LblError.Text = "Article Added, Awaiting Moderation!"; //Displays A Message
                 TbArticleTitle.Text = ""; //Clears The Textbox
                 TbArticleText.Text = ""; //Clears The Textbox
