@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -11,6 +13,12 @@ namespace HRiDiscuss
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            string ArticleQuery = "SELECT TOP 1 FROM Accounts ORDER BY ArticleID DESC "; //Our Query To Insert
+            SqlConnection ArticleConnect = new SqlConnection(ConfigurationManager.ConnectionStrings["DsAccounts"].ConnectionString); //Declaring Our Connection String
+            SqlCommand ArticleCmd = new SqlCommand(ArticleQuery, ArticleConnect); //Create A Command To Add To The Database
+
+
+
 
         }
     }

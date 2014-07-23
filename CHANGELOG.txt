@@ -52,3 +52,7 @@ V1.0.8:
 - Migrated All Functions To A Method (PowerToInnovate)
 - Always Tweakin' UI (Sorry)
 - Now Using A Secure SSL Channel And Transmitting Data Over https (#Ballin')
+
+V1.0.8.1:
+- Started UI Creation For Th Homepage
+- Tried Loading In Data (Failed)
