@@ -56,3 +56,6 @@ V1.0.8:
 V1.0.8.1:
 - Started UI Creation For Th Homepage
 - Tried Loading In Data (Failed)
+
+V1.0.8.2:
+- Totally Not Pushing A Broken Build

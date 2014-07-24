@@ -23,7 +23,7 @@
             <asp:Label ID="LblPostText3" runat="server" Text="PLACEHOLDER MAIN TEXT"></asp:Label><br /><br />
         </asp:Panel><br /><br /><br />
         <asp:Panel ID="PnlPost4" runat="server" Width="100%" style="overflow-x:hidden">
-            <asp:Label ID="LblPostTitle4" runat="server" Text="PLACEHOLDER MAIN TITLE"></asp:Label><br /><br />
+            <asp:Label ID="LblPostTitle4" runat="server" Text="PLACEHOLDER MAIN TITLE"></asp:Label><br /><br /> 
             <asp:Label ID="LblPostInfo4" runat="server" Text="PLACEHOLDER AUTHOR DATE"></asp:Label><br /><br />
             <asp:Image ID="PostImage4" runat="server" /><br /><br />
             <asp:Label ID="LblPostText4" runat="server" Text="PLACEHOLDER MAIN TEXT"></asp:Label><br /><br />

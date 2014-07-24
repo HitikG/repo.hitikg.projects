@@ -35,7 +35,7 @@ namespace HRiDiscuss
             int ExistingUsers = 0;
 
             LoginConnect.Open(); //Open The Connection
-            ExistingUsers = Convert.ToInt32(LoginCmd.ExecuteScalar().ToString());
+            ExistingUsers = Convert.ToInt32(LoginCmd.ExecuteScalar().ToString()); 
             LoginConnect.Close(); //Close Our Connection
 
             if (ExistingUsers > 0)
