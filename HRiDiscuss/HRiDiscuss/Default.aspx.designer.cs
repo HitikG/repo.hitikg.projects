@@ -13,6 +13,15 @@ namespace HRiDiscuss {
     public partial class Default {
         
         /// <summary>
+        /// DsArticles control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SqlDataSource DsArticles;
+        
+        /// <summary>
         /// PnlPost1 control.
         /// </summary>
         /// <remarks>
@@ -56,6 +65,15 @@ namespace HRiDiscuss {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label LblPostText1;
+        
+        /// <summary>
+        /// Literal1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Literal Literal1;
         
         /// <summary>
         /// PnlPost2 control.
