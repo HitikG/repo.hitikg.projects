@@ -54,7 +54,7 @@ V1.0.8:
 - Now Using A Secure SSL Channel And Transmitting Data Over https (#Ballin')
 
 V1.0.8.1:
-- Started UI Creation For Th Homepage
+- Started UI Creation For The Homepage
 - Tried Loading In Data (Failed)
 
 V1.0.8.2:
