@@ -22,6 +22,6 @@
           <AlwaysStartWebServerOnDebug>True</AlwaysStartWebServerOnDebug>
         </WebProjectProperties>
       </FlavorProperties>
-    </VisualStudio>
+    </VisualStudio> 
   </ProjectExtensions>
 </Project>
