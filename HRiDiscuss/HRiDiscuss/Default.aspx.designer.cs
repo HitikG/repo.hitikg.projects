@@ -30,7 +30,7 @@ namespace HRiDiscuss {
         /// </remarks>
         protected global::System.Web.UI.WebControls.Panel PnlPost1;
         
-        /// <summary>
+        /// <summary> 
         /// LblPostTitle1 control.
         /// </summary>
         /// <remarks>

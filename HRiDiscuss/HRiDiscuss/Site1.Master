@@ -33,7 +33,7 @@
                                 <asp:Label ID="LblCopyright" CssClass="Label" runat="server" Text="HRiUtilities 2012-2014"></asp:Label></li>
                         </ul>
                     </li>
-                </ul>
+                </ul> 
             </nav>
         </div> 
         <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">

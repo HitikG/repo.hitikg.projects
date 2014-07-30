@@ -21,7 +21,7 @@ namespace HRiDiscuss
             SqlDataReader DrData = ArticleCmd.ExecuteReader();
 ;
 
-            foreach (DataRow row in table.Rows) // Loop over the rows.
+            /*/*foreach (DataRow row in table.Rows) // Loop over the rows.
             {
                 LblPostTitle1.Text = DrData["ArticleTitle"].ToString();
                 LblPostInfo1.Text = DrData["ArticlePostDate"].ToString();
@@ -35,7 +35,7 @@ namespace HRiDiscuss
 
                 LblPostText2.Text = DrData["ArticleText"].ToString();
 
-            }
+        //    }*/
 
             ArticleConnect.Close();
         }

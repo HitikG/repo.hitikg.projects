@@ -107,7 +107,6 @@
     </Compile>
     <Compile Include="ModerationPage.aspx.cs">
       <DependentUpon>ModerationPage.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="ModerationPage.aspx.designer.cs">
       <DependentUpon>ModerationPage.aspx</DependentUpon>
