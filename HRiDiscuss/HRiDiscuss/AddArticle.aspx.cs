@@ -35,7 +35,7 @@ namespace HRiDiscuss
                 LblError.Text = "Enter A Valid Article Body."; //Displays An Error
                 if (TbArticleTitle.Text == "") //Checks If The Textbox Is Empty
                 {
-                    LblError.Text = "Enter A Valid Title."; //Displays An Error                   
+                    LblError.Text = "Enter A Valid Title."; //Displays An Error                    
                 }
             }
             else
